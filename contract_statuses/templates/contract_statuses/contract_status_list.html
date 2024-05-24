@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Contract Statuses</h2>
+<a href="{% url 'contract_statuses:contract_status_create' %}">Create New Status</a>
+<ul>
+    {% for status in object_list %}
+    <li>
+        {{ status.name }} - {% if status.is_active %}Active{% else %}Inactive{% endif %}
+        <a href="{% url 'contract_statuses:contract_status_update' status.id %}">Edit</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

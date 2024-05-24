@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contract Management</title>
+</head>
+<body>
+    <header>
+        <h1>Contract Management Application</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'contracts:contract_list' %}">Contracts</a></li>
+                <li><a href="{% url 'contract_statuses:contract_status_list' %}">Contract Statuses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Contract Management Application</p>
+    </footer>
+</body>
+</html>
